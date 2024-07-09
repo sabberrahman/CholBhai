@@ -4,7 +4,7 @@ const UserSchema = new Schema({
     clerkID: {type:String , require:true , unique:true},
     email: {type:String , require:true , unique:true},
     username: {type:String , require:true , unique:true},
-    firName: {type:String , require:true  },
+    firtName: {type:String , require:true  },
     lastName: {type:String , require:true  },
     photo: {type:String , require:true },
    
