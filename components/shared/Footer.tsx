@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className='border-t'> 
             
           <div className='flex flex-col wrapper justify-between items-center sm:flex-row gap-4 p-4'>
-          <Link href={"/"} className='w-36 flex flex-row items-center'>
+          <Link href={"/"} className='w-36 flex flex-row items-center justify-center'>
       <Image
     src="/assets/icons/workingg.png"
     alt='logo'
