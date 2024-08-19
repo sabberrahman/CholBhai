@@ -1,8 +1,12 @@
+import { Rocket } from 'lucide-react'
+import { Gruppo } from 'next/font/google'
 import React from 'react'
 
 function Quote() {
   return (
-    <div className="max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+
+    <>
+    <div className="hidden md:flex max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
     
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
      
@@ -64,6 +68,14 @@ function Quote() {
     </div>
     
   </div>
+
+  <div className="md:hidden lg:hidden flex items-center justify-center flex-col backdrop-blur-lg bg-dotted-pattern">
+    <h1 className='text-3xl  font-bold text-center'>Trusted By</h1>
+    <h1 className="text-2xl  font-bold text-center text-blue-600 flex ">+30k Growing Community </h1>
+  </div>
+    
+    </>
+    
   )
 }
 

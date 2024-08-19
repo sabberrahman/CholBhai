@@ -1,9 +1,11 @@
+import CategoryFilter from "@/components/shared/CategoryFilter";
 import Collection from "@/components/shared/Collection";
 import FrontHero from "@/components/shared/FrontHero";
 import Quote from "@/components/shared/Quote";
 import Search from "@/components/shared/Search";
 import { Button } from "@/components/ui/button";
 import { getAllEvents } from "@/lib/actions/event.action";
+import Category from "@/lib/database/model/category.model";
 import { SearchParamProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,7 +32,7 @@ export default async function Home({searchParams}:SearchParamProps) {
 
       <div className="flex w-full flex-col gap-5 md:flex-row">
         <Search />
-         catagory 
+         <CategoryFilter/>
         </div>
 
         <Collection
