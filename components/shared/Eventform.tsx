@@ -30,6 +30,8 @@ import { useRouter } from "next/navigation"
 import { createEvent,  updateEvent } from "@/lib/actions/event.action"
 import Dropdown from "./DropDown"
 import { IEvent } from "@/lib/database/model/event.model"
+import { toast } from "sonner"
+
 
 
 
@@ -84,6 +86,7 @@ const Eventform = ({userId,type,event,eventId}: EventFormProps) => {
 
         if(newEvent) {
           form.reset();
+          toast("Event is Created 🥳")
           router.push(`/events/${newEvent._id}`)
         }
       } catch (error) {
@@ -106,6 +109,7 @@ const Eventform = ({userId,type,event,eventId}: EventFormProps) => {
 
         if(updatedEvent) {
           form.reset();
+          toast("Event is Updated 🥳")
           router.push(`/events/${updatedEvent._id}`)
         }
       } catch (error) {

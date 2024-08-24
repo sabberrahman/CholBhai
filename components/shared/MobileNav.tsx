@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import {
     Sheet,
     SheetContent,
@@ -14,9 +15,11 @@ import { NavItems } from './NavItems'
   
 
 export const MobileNav = () => {
+  const [isOpen,setIsOpen]=useState(false)
+  const handleSheetTrigger = () => setIsOpen(!isOpen);
   return (
     <nav className='md:hidden'>
-      <Sheet>
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
   <SheetTrigger className='align-middle'>
     <Image 
     src="/assets/icons/menu.svg"
@@ -27,13 +30,20 @@ export const MobileNav = () => {
     />
   </SheetTrigger>
   <SheetContent className='flex flex-col gap-6 bg-white'>
-    <Image
-    src="/assets/images/logo.svg"
+    <div className="flex justify-center items-center">
+      <Image
+    src="/assets/icons/workingg.png"
     alt='logo'
-    width={128}
-    height={38}/>
+    width={50}
+    height={30}/>
+     <span className='font-bold text-xl font-serif flex flex-row'>Chol <span className='font-bold text-xl font-serif text-primary-500 italic rotate-3'>Bhai</span></span>
+    </div>
+    
     <Separator className='border  border-gray-100'/>
-    <NavItems/>
+    <div onClick={handleSheetTrigger}>
+      <NavItems/>
+    </div>
+    
 
 
   </SheetContent>
